@@ -1,0 +1,7 @@
+.card-filme .card:hover{
+    transform: scale(1.02);
+}
+
+.card-filme .card{
+    transition: transform 100ms ease-in-out;
+}

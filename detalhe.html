@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="imgs/logo.png" itemprop="image">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/template.css">
+    <!-- Bootstrap CSS 5.1.3 - 04/2022 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- Fontawesome 6.1.1 - 04/2022 -->
+
+    <!-- Fonte do texto -->
+
+    <title>Tomatoes Rotten</title>
+</head>
+
+<body>
+
+    <header class="header">
+        <!-- Barra de navegação superior -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <img class="navbar-brand" src="imgs/logo.png" alt="logo" width="30" height="40">
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <!-- href temporario -->
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Pesquisar filme"
+                            aria-label="Search">
+                        <button class="btn btn-outline-light" type="submit">Pesquisar</button>
+                    </form>
+                </div>
+
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="row">
+            <div class="col-md-6">
+                <img id="poster" class="img-fluid h-100 w-100">
+            </div>
+            <div class="col-md-6 d-flex flex-column">
+                <div>
+                    <b>Titulo:</b> <span id="title"></span>
+                </div>
+                <div>
+                    <b>Orçamento:</b> <span id="budget"></span>
+                </div>
+                <div>
+                    <b>Website:</b> <span id="homepage"></span>
+                </div>
+                <div>
+                    <b>Gêneros:</b> <span id="genres"></span>
+                </div>
+                <div>
+                    <b>Idioma:</b> <span id="original_language"></span>
+                </div>
+                <div>
+                    <b>Sinopse:</b> <span id="overview"></span>
+                </div>
+                <div>
+                    <b>Popularidade:</b> <span id="popularity"></span>
+                </div>
+                <div>
+                    <b>Data de Lançamento:</b> <span id="release_date"></span>
+                </div>
+                <div>
+                    <b>Avaliação:</b> <span id="vote_average"></span>
+                </div>
+                <!-- <div>
+                    <b>Produção:</b> <span id="production_companies"></span>
+                </div> -->
+            </div>
+        </div>
+    </main>
+
+
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="py-4 text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            <p class="footertext">© 2022 Copyright: Lucas Jácome - Desenvolvimento de Interfaces Web -
+                <b>ICEI PUC MINAS</b>
+            </p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap Javascript 2.10 - 04/2022 -->
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" 
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" 
+        crossorigin="anonymous"></script>-->
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+        crossorigin="anonymous"></script>
+</body>
+
+
+<!-- Javascript -->
+<script src="js/moment.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+    integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+    integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+    crossorigin="anonymous"></script>
+<script>
+    const API_KEY_v4 = 'eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyN2JhZDFiYTRkM2UwYzVjOWQ3MWRlMjkzZWMxOTgxNSIsInN1YiI6IjYyYjI1ZGNkMjQ1ZGJlMDA4YWM3MTQyYSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.uJ6G4MQ9CIt0LS7Nqc5oP_H97VOlpunpduPvEeWD0R8';
+    const API_KEY_v3 = '27bad1ba4d3e0c5c9d71de293ec19815';
+    const ROOT_API_ENDPOINT = 'https://api.themoviedb.org/3';
+    const ROOT_IMAGE_ENDPOINT = 'https://image.tmdb.org/t/p/original/';
+    const MOVIE_ID = (new URLSearchParams(window.location.search)).get('movieId');
+    console.log(MOVIE_ID)
+    if (!MOVIE_ID) {
+        alert('Filme não encontrado');
+        window.location = '/';
+    }
+
+    let movie = {};
+
+    const handleMovie = (movie_api_result) => {
+        console.log(movie_api_result);
+        movie = movie_api_result;
+    }
+
+    const loadDataToPage = () => {
+        const templateCard = $("#templateCardFilme");
+        let cardAtual, movieAtual, badges;
+
+        for (key in movie) {
+            let data;
+            switch (key) {
+                case 'poster_path':
+                    $("#poster").attr("src", `${ROOT_IMAGE_ENDPOINT}${movie[key]}?api_key=${API_KEY_v3}`).attr("alt", movie['title']);
+                    break;
+                case 'genres':
+                    data = movie[key].reduce((fullText, currentGenre) => {
+                        fullText += `${currentGenre.name}, `
+                        return fullText;
+                    }, '');
+                    data = data.substring(0, data.length - 2);
+                    break;
+                /*case 'production_companies':
+                    movie[key].forEach?.(v => {
+                        
+                    })
+                    break;*/
+                default:
+                    data = movie[key];
+            }
+            data = !data ? 'Não informado' : data;
+            $("#" + key).html(data);
+        }
+
+        $("#spinnerMovies").addClass("d-none");;
+    }
+
+    const generateMoviesRequestConfig = () => {
+        return {
+            url: `${ROOT_API_ENDPOINT}/movie/${MOVIE_ID}`,
+            headers: {
+                'Authorization': `Bearer ${API_KEY_v4}`
+            },
+            data: {
+                region: 'BR',
+                language: 'pt-BR'
+            },
+            method: 'GET',
+            dataType: 'json',
+            success: handleMovie,
+            error: (err) => {
+                alert('Filme não encontrado');
+                window.location = '/';
+            }
+        }
+    }
+    const getMoreMovies = () => {
+        $("#spinnerMovies").removeClass("d-none");
+        Promise.all([
+            $.ajax(generateMoviesRequestConfig())
+        ]).then(values => {
+            loadDataToPage();
+        })
+    }
+
+
+
+    $(document).ready(() => {
+        getMoreMovies();
+        $("#btnMoreMovies").click(getMoreMovies);
+    });
+</script>
+
+
+</html>
