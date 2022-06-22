@@ -54,7 +54,7 @@ const API_KEY_v4 = 'eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyN2JhZDFiYTRkM2UwYzVjOWQ3MWR
         const handleClickFilme = (event) => {
             event.preventDefault();
             const movieId = $(event.currentTarget).attr("data-filme-id");
-            window.location = '/detalhe.html?movieId=' + movieId;
+            window.location = 'detalhe.html?movieId=' + movieId;
         }
 
         const generateMoviesRequestConfig = (pageIndex = 1) => {
